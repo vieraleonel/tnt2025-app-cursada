@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { contenidosAudiovisuales } from "@/src/data/contenidosAudiovisuales";
 import {
   IGeneroContenidoAudiovisual,
@@ -8,6 +8,7 @@ import {
   ITipoContenidoAudiovisual,
   tiposContenidoAudiovisual,
 } from "@/src/data/tiposContenidoAudiovisual";
+import { TextPressStart2P } from "../components/TextPressStart2P";
 
 export function HomeScreen() {
   return (
@@ -41,9 +42,9 @@ function Item({ contenido, tipoId, generosId }: IItemProps) {
 
   return (
     <View style={itemStyles.container}>
-      <Text>Nombre: {contenido}</Text>
-      <Text>Tipo: {tipoStr}</Text>
-      <Text>Generos: {generosStr}</Text>
+      <TextPressStart2P>Nombre: {contenido}</TextPressStart2P>
+      <TextPressStart2P>Tipo: {tipoStr}</TextPressStart2P>
+      <TextPressStart2P>Generos: {generosStr}</TextPressStart2P>
     </View>
   );
 }
