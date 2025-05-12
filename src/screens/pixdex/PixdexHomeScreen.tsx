@@ -8,18 +8,30 @@ import {
   ITipoContenidoAudiovisual,
   tiposContenidoAudiovisual,
 } from "@/src/data/tiposContenidoAudiovisual";
-import { TextPressStart2P } from "../components/TextPressStart2P";
+import { TextPressStart2P } from "../../components/TextPressStart2P";
+import { Link } from "expo-router";
 
-export function HomeScreen() {
+export function PixdexHomeScreen() {
   return (
     <ScrollView style={styles.container}>
       {contenidosAudiovisuales.map((contenido) => (
-        <Item
+        // /pixdex/detail/[id].tsx
+        // /pixdex/detail/[id].tsx
+
+        // /pixdex/detail/1
+        <Link
+          href={{
+            pathname: "/pixdex/detail/[id]",
+            params: { id: contenido.id },
+          }}
           key={contenido.id}
-          contenido={contenido.nombre}
-          tipoId={contenido.tipoId}
-          generosId={contenido.generos}
-        />
+        >
+          <Item
+            contenido={contenido.nombre}
+            tipoId={contenido.tipoId}
+            generosId={contenido.generos}
+          />
+        </Link>
       ))}
     </ScrollView>
   );
