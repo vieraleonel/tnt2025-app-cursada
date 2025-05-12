@@ -19,6 +19,11 @@ export function AppHomeScreen() {
           descripcion="Navegación de estilo modal"
           ruta="/ejemplos/modal"
         />
+        <AccesoRapidoCard
+          titulo="Promesas - Asincronismo"
+          descripcion=""
+          ruta="/ejemplos/promesas"
+        />
       </ScrollView>
     </SafeAreaView>
   );
