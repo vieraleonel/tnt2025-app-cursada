@@ -8,11 +8,16 @@ export function AppHomeScreen() {
     <SafeAreaView>
       <Stack.Screen options={{ title: "Inicio" }} />
       <PixdexBanner />
-      <ScrollView>
+      <ScrollView contentContainerStyle={{ gap: 20 }}>
         <AccesoRapidoCard
           titulo="useState"
           descripcion="Ejemplos simple con use state"
           ruta="/ejemplos/usestate"
+        />
+        <AccesoRapidoCard
+          titulo="modal"
+          descripcion="Navegación de estilo modal"
+          ruta="/ejemplos/modal"
         />
       </ScrollView>
     </SafeAreaView>
