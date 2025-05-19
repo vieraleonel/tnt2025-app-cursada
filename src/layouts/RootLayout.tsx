@@ -4,7 +4,7 @@ import { Platform } from "react-native";
 export function RootLayout() {
   return (
     <Stack>
-      <Stack.Screen name="index" />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen
         name="ejemplos/modal/modalexpo"
         options={{
