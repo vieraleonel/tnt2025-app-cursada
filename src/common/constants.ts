@@ -8,3 +8,5 @@ export const pixdexColors = {
   grisOscuro: "#403E43",
   grisClaro: "#F6F6F7",
 };
+
+export const API_URL = process.env.EXPO_PUBLIC_API_URL;

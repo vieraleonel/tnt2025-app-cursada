@@ -1,3 +1,4 @@
+import { API_URL } from "@/src/common/constants";
 import { ITipoContenidoAudiovisual } from "@/src/data/tiposContenidoAudiovisual";
 import { useState } from "react";
 import { ActivityIndicator, Button, Text, View } from "react-native";
@@ -9,7 +10,7 @@ export default function PromesasApi() {
   async function obtenerTiposAsync() {
     setIsConsultado(true);
     try {
-      const response = await fetch("http://10.7.70.150:8081/tipos");
+      const response = await fetch(`${API_URL}/tipos`);
       if (!response.ok) {
         throw new Error("NOT OK");
       }
@@ -26,7 +27,7 @@ export default function PromesasApi() {
   function obtenerTipos() {
     setIsConsultado(true);
 
-    fetch("http://10.7.70.150:8081/tipos")
+    fetch(`${API_URL}/tipos`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("NOT OK");
@@ -64,7 +65,7 @@ export default function PromesasApi() {
       </View>
 
       {tipos.map((tipo) => (
-        <View style={{ gap: 10 }}>
+        <View key={tipo.singular} style={{ gap: 10 }}>
           <View
             key={tipo.id}
             style={{ padding: 10, backgroundColor: "yellow" }}

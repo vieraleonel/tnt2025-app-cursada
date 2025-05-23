@@ -7,10 +7,7 @@ import { pixdexColors } from "../common/constants";
 
 export function AppHomeScreen() {
   return (
-    <SafeAreaView
-      edges={["left", "right", "bottom"]}
-      style={appHomeStyles.container}
-    >
+    <SafeAreaView edges={["top"]} style={appHomeStyles.container}>
       <PixdexBanner />
       <ScrollView contentContainerStyle={{ gap: 20 }}>
         <AccesoRapidoCard
@@ -25,13 +22,23 @@ export function AppHomeScreen() {
         />
         <AccesoRapidoCard
           titulo="Promesas - Asincronismo - Simple"
-          descripcion=""
+          descripcion="Syntaxis y formas de usar"
           ruta="/ejemplos/promesas/promesas"
         />
         <AccesoRapidoCard
-          titulo="Promesas - Asincronismo"
-          descripcion=""
+          titulo="Promesas - API"
+          descripcion="Interacción típica con API"
           ruta="/ejemplos/promesas/promesasApi"
+        />
+        <AccesoRapidoCard
+          titulo="Promesas - API - Anidado"
+          descripcion=""
+          ruta="/ejemplos/promesas/promesasApiAnidado"
+        />
+        <AccesoRapidoCard
+          titulo="Promesas - API - Suspense"
+          descripcion=""
+          ruta="/ejemplos/promesas/promesasApiSuspense"
         />
       </ScrollView>
     </SafeAreaView>

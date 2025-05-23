@@ -1,5 +1,5 @@
 import { contenidosAudiovisuales } from "@/src/data/contenidosAudiovisuales";
 
-export function GET(request: Request) {
+export function GET() {
   return Response.json(contenidosAudiovisuales);
 }
