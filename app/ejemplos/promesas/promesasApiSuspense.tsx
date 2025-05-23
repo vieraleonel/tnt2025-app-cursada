@@ -10,7 +10,7 @@ import {
   View,
 } from "react-native";
 
-export default function promesasApiAnidado() {
+export default function promesasApiSuspense() {
   const [isConsultandoContenidos, setIsConsultandoContenidos] =
     useState<boolean>(false);
   const [contenidos, setContenidos] = useState<IContenidoAudiovisual[]>([]);
